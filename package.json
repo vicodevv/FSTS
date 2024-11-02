@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "gsap": "^3.12.5",
+    "hamburger-react": "^2.5.1",
     "jotai": "^2.10.1",
     "locomotive-scroll": "^4.1.4",
     "next": "15.0.2",
     "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028"
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "splitting": "^1.1.0"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.3",

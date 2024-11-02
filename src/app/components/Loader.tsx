@@ -7,7 +7,7 @@ const Loader = () => {
   const setIsAssetsLoaded = useSetAtom(AssetsLoadedAtom)
 
   useEffect(() => {
-    const assets = ['/images/band.svg', '/images/culture.svg']
+    const assets = ['/images/band.svg', '/images/culture.svg', 'Logo.svg']
 
     const totalAssets = assets.length - 1
     let loadedAssets = 0
