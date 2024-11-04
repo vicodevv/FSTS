@@ -34,14 +34,13 @@ const Header = () => {
 
 
   return (
-    <div className="text-gray-50 scrollbar-hide" ref={containerRef}>
+    <div className="text-gray-50 scrollbar-hide h-[93px] bg-red-800" ref={containerRef}>
       <section className="relative">
-        <div className="flex items-start justify-between">
+        <div className="flex justify-between">
           <h6
-            className="text-head-70 sm:text-head-110 gap-x-8 gap-y-2 flex-wrap"
-            data-animation="paragraph"
+            className="flex text-head-70 sm:text-head-110 items-center gap-x-4 gap-y-2 flex-wrap mt-4"
           >
-            <Image src="/Logo.svg" alt="logo" width={200} height={30} />
+            <Image src="/Logo.svg" alt="logo" width={87} height={30} />
           </h6>
           <Navbar />
         </div>

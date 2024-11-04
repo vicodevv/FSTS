@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-[295px] font-[300] hidden sm:flex justify-end items-center gap-x-4 gap-y-2 flex-wrap mt-4">
+      <nav className="w-[495px] font-[300] hidden sm:flex justify-end items-center gap-x-6 gap-y-2 flex-wrap mt-4">
         {NAV_LINKS.map((link, index) => (
           <Link href={link.href} key={index} className="text-sm text-gray-50">
             {link.title}
