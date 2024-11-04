@@ -1,7 +1,7 @@
-import { Karla } from 'next/font/google'
-import type { Metadata } from 'next'
-import './globals.css'
-import localFont from 'next/font/local'
+import { Karla } from 'next/font/google';
+import type { Metadata } from 'next';
+import './globals.css';
+import localFont from 'next/font/local';
 
 const recoleta = localFont({
   variable: '--font-recoleta',
@@ -12,19 +12,19 @@ const recoleta = localFont({
       style: 'normal',
     },
   ],
-})
+});
 
-const karla = Karla({ subsets: ['latin'], variable: '--font-karla' })
+const karla = Karla({ subsets: ['latin'], variable: '--font-karla' });
 
 export const metadata: Metadata = {
   title: 'From South To South',
   description: 'FSTS',
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -32,5 +32,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }

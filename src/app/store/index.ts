@@ -1,9 +1,9 @@
-import { atom } from 'jotai'
+import { atom } from 'jotai';
 
 type AssetsLoadedType = {
-  isAssetsLoaded: boolean
-}
+  isAssetsLoaded: boolean;
+};
 
 export const AssetsLoadedAtom = atom<AssetsLoadedType>({
   isAssetsLoaded: false,
-})
+});
