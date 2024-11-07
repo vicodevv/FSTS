@@ -33,7 +33,10 @@ const Header = () => {
   );
 
   return (
-    <div className="text-gray-50 scrollbar-hide h-[93px]" ref={containerRef}>
+    <div
+      className="text-gray-50 scrollbar-hide h-[93px] px-[30px]"
+      ref={containerRef}
+    >
       <section className="relative">
         <div className="flex justify-between">
           <h6 className="flex text-head-70 sm:text-head-110 items-center gap-x-4 gap-y-2 flex-wrap mt-4">

@@ -12,6 +12,15 @@ const Loader = () => {
       '/images/culture.svg',
       '/images/culture2.svg',
       '/images/culture3.svg',
+      '/images/culture4.svg',
+      '/images/culture5.svg',
+      '/images/culture6.svg',
+      '/images/culture7.svg',
+      '/images/culture8.svg',
+      '/images/culture9.svg',
+      '/images/culture10.svg',
+      '/images/culture11.svg',
+      '/images/culture12.svg',
       'Logo.svg',
     ];
 
