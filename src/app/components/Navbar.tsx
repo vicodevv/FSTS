@@ -3,6 +3,44 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+interface OverlayProps {
+  isOpen: boolean;
+  closeOverlay: () => void;
+  children: React.ReactNode;
+}
+
+const Overlay: React.FC<OverlayProps> = ({
+  isOpen,
+  closeOverlay,
+  children,
+}) => (
+  <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center text-white h-screen">
+    {/* Header */}
+    <div className="absolute top-8 left-8">
+      <Image src="/Logo.svg" alt="logo" width={87} height={30} />
+    </div>
+    {children}
+    {/* Footer */}
+    <div className="absolute bottom-8 text-xs text-gray-400 flex space-x-4">
+      <a href="mailto:hello@soli.earth">hello@soli.earth</a>
+      <Link href="/terms">
+        <p>Terms & Conditions</p>
+      </Link>
+      <Link href="/privacy">
+        <p>Privacy Policy</p>
+      </Link>
+    </div>
+
+    {/* Close Button */}
+    <button
+      onClick={closeOverlay}
+      className="absolute cursor-pointer top-8 right-8 text-xl"
+    >
+      ✕
+    </button>
+  </div>
+);
+
 const Navbar = () => {
   const NAV_LINKS = [
     { id: 1, title: 'Opinion', href: '/opinion' },
@@ -22,6 +60,11 @@ const Navbar = () => {
   const [isOpen, setOpen] = React.useState(false); // For mobile menu
   const [isSearchOpen, setSearchOpen] = React.useState(false); // For search overlay
 
+  const handleSearchOpen = () => setSearchOpen(true);
+  const handleSearchClose = () => setSearchOpen(false);
+  const handleMenuOpen = () => setOpen(true);
+  const handleMenuClose = () => setOpen(false);
+
   return (
     <>
       <nav className="w-[495px] font-[300] hidden sm:flex justify-end items-center gap-x-6 gap-y-2 flex-wrap mt-4">
@@ -36,7 +79,7 @@ const Navbar = () => {
         ))}
         <button
           className="text-[18px] text-gray-50"
-          onClick={() => setSearchOpen(true)} // Open search overlay
+          onClick={handleSearchOpen} // Open search overlay
         >
           <Image src="/images/search.svg" alt="search" width={20} height={20} />
         </button>
@@ -47,11 +90,7 @@ const Navbar = () => {
 
       {/* Search Overlay */}
       {isSearchOpen && (
-        <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center text-white h-screen">
-          {/* Header */}
-          <div className="absolute top-8 left-8">
-            <Image src="/Logo.svg" alt="logo" width={87} height={30} />
-          </div>
+        <Overlay isOpen={isSearchOpen} closeOverlay={handleSearchClose}>
           {/* Search Bar */}
           <input
             type="text"
@@ -63,36 +102,14 @@ const Navbar = () => {
             alt="search"
             width={20}
             height={20}
-            className="absolute left-[1050px] top-1/2 transform -translate-y-1/2"
+            className="absolute cursor-pointer left-[1050px] top-1/2 transform -translate-y-1/2"
           />
-          {/* Close Button */}
-          <button
-            onClick={() => setSearchOpen(false)}
-            className="absolute cursor-pointer top-8 right-8 text-xl"
-          >
-            ✕
-          </button>
-          {/* Footer */}
-          <div className="absolute bottom-8 text-xs text-gray-400 flex space-x-4">
-            <a href="mailto:hello@soli.earth">hello@soli.earth</a>
-            <Link href="/terms">
-              <p>Terms & Conditions</p>
-            </Link>
-            <Link href="/privacy">
-              <p>Privacy Policy</p>
-            </Link>
-          </div>
-        </div>
+        </Overlay>
       )}
 
       {/* Overlay and mobile menu */}
       {isOpen && !isSearchOpen && (
-        <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center text-white h-screen">
-          {/* Header */}
-          <div className="absolute top-8 left-8">
-            <Image src="/Logo.svg" alt="logo" width={87} height={30} />
-          </div>
-
+        <Overlay isOpen={isOpen} closeOverlay={handleMenuClose}>
           {/* Tag Links */}
           <div className="flex flex-col items-start text-left space-y-6 min-w-[900px]">
             {TAG_LINKS.map((link) => (
@@ -115,26 +132,7 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-
-          {/* Footer */}
-          <div className="absolute bottom-8 text-xs text-gray-400 flex space-x-4">
-            <a href="mailto:hello@soli.earth">hello@soli.earth</a>
-            <Link href="/terms">
-              <p>Terms & Conditions</p>
-            </Link>
-            <Link href="/privacy">
-              <p>Privacy Policy</p>
-            </Link>
-          </div>
-
-          {/* Close Button */}
-          <button
-            onClick={() => setOpen(false)}
-            className="absolute cursor-pointer top-8 right-8 text-xl"
-          >
-            ✕
-          </button>
-        </div>
+        </Overlay>
       )}
     </>
   );
