@@ -62,12 +62,18 @@ const Page = () => {
               tags={['Article', 'Film & Video', 'Feature']}
               title="Writers, Poets, and Storytellers from the Heart of the South"
               date="17 October 2024"
+              tagClassName="bg-[#FFFFFF33] text-[#FFFFFF]"
+              titleClassName="text-[#FFFFFF]"
+              dateClassName="text-[#7E7E7E]"
             />
             <SidebarCard
               imageSrc="/images/culture3.svg"
               tags={['Article', 'Film & Video', 'Feature']}
               title="Conversations with Creative Trailblazers and Thought Leaders"
               date="17 October 2024"
+              tagClassName="bg-[#FFFFFF33] text-[#FFFFFF]"
+              titleClassName="text-[#FFFFFF]"
+              dateClassName="text-[#7E7E7E]"
             />
           </div>
         </div>
@@ -110,7 +116,7 @@ const Page = () => {
 
         {/* Third Section - New 3x2 Grid Layout */}
         <div className="bg-white p-6 px-[30px]">
-          <h2 className="text-[64px] font-bold text-black py-4">Category</h2>
+          <h3 className="text-[64px] font-bold text-black py-4">Category</h3>
           <div className="grid grid-cols-4 gap-6">
             {/* First Row: FeatureCard spanning 2 columns and 2 SidebarCards */}
             <FeatureCard
@@ -163,7 +169,7 @@ const Page = () => {
         </div>
         {/* Fourth Section - Video Feature */}
         <div className="bg-black p-6 px-[30px]">
-          <h2 className="text-[64px] font-bold text-white py-4">Category</h2>
+          <h3 className="text-[64px] font-bold text-white py-4">Category</h3>
           <FeatureCard
             imageSrc="/images/culture.svg"
             tags={['Film & Video', 'Article', 'Feature']}

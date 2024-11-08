@@ -28,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${karla.variable} ${recoleta.variable} antialiased`}>
+      <body
+        className={`${karla.variable} ${recoleta.variable} antialiased`}
+        style={{ fontFamily: 'Gelasio-italic, Arial, sans-serif' }}
+      >
         {children}
       </body>
     </html>
