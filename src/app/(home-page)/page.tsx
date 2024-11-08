@@ -44,19 +44,19 @@ const Page = () => {
 
         <div className="flex space-x-2 px-[30px]">
           {/* Left Main Feature Section */}
-          <div className="w-2/3 relative">
+          <div className="w-4/5 relative">
             <FeatureCard
               imageSrc="/images/culture.svg"
               tags={['Film & Video', 'Article', 'Feature']}
               title="Soul Stories: Interviews with Groundbreaking Authors"
               className="h-[746px] w-[1030px]"
-              width={900}
+              width={1030}
               height={746}
             />
           </div>
 
           {/* Right Sidebar Section */}
-          <div className="w-1/3 space-y-8 pl-[40px]">
+          <div className="space-y-8">
             <SidebarCard
               imageSrc="/images/culture2.svg"
               tags={['Article', 'Film & Video', 'Feature']}
@@ -114,7 +114,7 @@ const Page = () => {
           />
         </div>
 
-        {/* Third Section - New 3x2 Grid Layout */}
+        {/* Third Section - New 4*2 Grid Layout */}
         <div className="bg-white p-6 px-[30px]">
           <h3 className="text-[64px] font-bold text-black py-4">Category</h3>
           <div className="grid grid-cols-4 gap-6">
