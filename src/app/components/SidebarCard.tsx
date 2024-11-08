@@ -44,7 +44,7 @@ const SidebarCard: React.FC<SidebarCardProps> = ({
         ))}
       </div>
       <h2
-        className={`text-[22px] text-[#000000] max-w-[300px] leading-[47px]${titleClassName}`}
+        className={`text-[22px] text-[#000000] max-w-[300px] leading-[27px] ${titleClassName}`}
       >
         {title}
       </h2>

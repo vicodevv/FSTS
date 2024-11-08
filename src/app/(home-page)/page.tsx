@@ -90,14 +90,6 @@ const Page = () => {
           />
           <FeatureCard
             imageSrc="/images/culture5.svg"
-            tags={['Article', 'Feature']}
-            title="The Soulful Sounds of Street Musicians Across the Globe"
-            className="h-[468px] w-[668px]"
-            height={468}
-            width={668}
-          />
-          <FeatureCard
-            imageSrc="/images/culture.svg"
             tags={['Article', 'Film & Video', 'Feature']}
             title="Interviews with Creatives Bridging the Past and Future"
             className="h-[468px] w-[668px]"
@@ -105,9 +97,17 @@ const Page = () => {
             width={668}
           />
           <FeatureCard
+            imageSrc="/images/culture.svg"
+            tags={['Article', 'Film & Video', 'Feature']}
+            title="Soul Stories: Interviews with Groundbreaking Authors"
+            className="h-[468px] w-[668px]"
+            height={468}
+            width={668}
+          />
+          <FeatureCard
             imageSrc="/images/culture6.svg"
-            tags={['Photo Essay', 'Feature']}
-            title="Children of the World: A Glimpse into Diverse Cultures"
+            tags={['Article', 'Film & Video', 'Feature']}
+            title="New Narratives: Young Authors Transforming Their Communities"
             className="h-[468px] w-[668px]"
             height={468}
             width={668}
@@ -122,7 +122,7 @@ const Page = () => {
             <FeatureCard
               imageSrc="/images/culture6.svg"
               tags={['Film & Video', 'Article', 'Feature']}
-              title="Discovering the Beats and Heritage of Emerging Artists"
+              title="New Narratives: Young Authors Transforming Their Communities"
               className="col-span-1 h-[468px] flex"
               height={468}
               width={668}
@@ -130,13 +130,13 @@ const Page = () => {
             <SidebarCard
               imageSrc="/images/culture7.svg"
               tags={['Film & Video', 'Article', 'Feature', 'Opinion']}
-              title="Exploring the Intersection of Creativity and Social Change"
+              title="Discovering the Beats and Heritage of Emerging Artists"
               date="17 October 2024"
             />
             <SidebarCard
               imageSrc="/images/culture8.svg"
               tags={['Film & Video', 'Article', 'Feature', 'Opinion']}
-              title="New Narratives: Young Authors Transforming Their Communities"
+              title="Exploring the Intersection of Creativity and Social Change"
               date="17 October 2024"
             />
 
@@ -144,19 +144,19 @@ const Page = () => {
             <SidebarCard
               imageSrc="/images/culture9.svg"
               tags={['Film & Video', 'Article', 'Feature']}
-              title="Glimpses of Daily Life Around the World"
+              title="Into the Mix: The Fusion of Traditional and Modern Music"
               date="17 October 2024"
             />
             <SidebarCard
               imageSrc="/images/culture10.svg"
               tags={['Film & Video', 'Article', 'Feature', 'Opinion']}
-              title="Art as a Tool for Social Reflection and Empowerment"
+              title="Reclaiming the Lens: Photography by Global South Storytellers"
               date="17 October 2024"
             />
             <SidebarCard
               imageSrc="/images/culture7.svg"
               tags={['Film & Video', 'Article', 'Feature', 'Opinion']}
-              title="Expressions of Culture through Urban Photography"
+              title="Discovering the Beats and Heritage of Emerging Artists"
               date="17 October 2024"
             />
             <SidebarCard
@@ -173,7 +173,7 @@ const Page = () => {
           <FeatureCard
             imageSrc="/images/culture.svg"
             tags={['Film & Video', 'Article', 'Feature']}
-            title="Discovering the Beats and Heritage of Emerging Artists"
+            title="Heritage in Harmony: Traditional Instruments in Modern Music"
             className="h-[760px] w-full"
             height={768}
             width={1360}
@@ -192,7 +192,7 @@ const Page = () => {
           <FeatureCard
             imageSrc="/images/culture5.svg"
             tags={['Article', 'Feature']}
-            title="The Soulful Sounds of Street Musicians Across the Globe"
+            title="Interviews with Creatives Bridging the Past and Future"
             className="h-[468px] w-[668px]"
             height={468}
             width={668}
